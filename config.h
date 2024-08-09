@@ -70,6 +70,7 @@ static const struct arg args[] = {
 	{ ram_perc, "󰒋 %s  |  ", NULL},
 	{ wifi_essid,    "%s  |  ",           "wlp2s0"       },
 	{ wifi_perc, "  %s%%  |  ",    "wlp2s0"       }, 
+  { run_command, "󱐋 %s  |  ", "cat /sys/class/power_supply/BAT0/current_now /sys/class/power_supply/BAT0/voltage_now | xargs | awk '{print $1*$2/1e12 \" W\"}'" },
 	{ battery_perc, "󰁹 %s%%  |  ", "BAT0" }, 
 	{ datetime, "%s", "%a %d %B  |  %I:%M %p  | "},
 };
